@@ -1,0 +1,2 @@
+# socialMood
+### a Sails application
