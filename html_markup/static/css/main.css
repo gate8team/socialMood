@@ -33,15 +33,24 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
 .main {margin: 20px 0 0 0; padding: 0 30px;}
     .main__search {max-width: 600px; margin: 0 auto;}
     .main__preloader {background: url(../i/preloader.GIF) no-repeat; height: 40px; width: 40px; margin: 0 auto;}
-    .main__results {}
-        .main__results__title {font-size: 20px; font-weight: 400; margin: 40px 0 20px 0;}
-        .main__results__description {font-weight: 300;}
+    .main__status {}
+        .main__status__title {font-size: 20px; font-weight: 400; margin: 30px 0 30px 0;}
+    .main__results {margin-top: 30px;}
+        .main__results__item {font-weight: 300;}
+            .main__results__item__user {}
+                .main__results__item__user__ava {height: 54px; width: 70px; overflow: hidden;}
+                    .main__results__item__user__ava img {border-radius: 50%; border: 3px solid #0c8da0;}
+                .main__results__item__user__info {line-height: 18px; min-height: 54px; font-size: 14px;}
+            .main__results__item__text {}
 
 .row {overflow: hidden;}
+    .row + .row {margin: 20px 0;}
     .row:after {content: ''; display: inline-block; clear: both;}
     .row .col {width: 100%;}
     .row .col__1of3 {width: 33%;}
     .row .col__2of3 {width: 66%;}
+    .row .col__1of4 {width: 25%;}
+    .row .col__3of4 {width: 75%;}
     .row .col__1of2 {width: 50%;}
     .row .col__left {float: left;}
     .row .col__right {float: right;}

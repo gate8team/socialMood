@@ -15,6 +15,7 @@ module.exports = {
    index: function (req, res) {
       return res.view({
 //          corndogs: [{name: 'Hank the Corndog'}, {name: 'Lenny the Corndog'}]
+          title: 'SocialMood'
       });
   },
 
@@ -24,7 +25,8 @@ module.exports = {
 
         twit.search(req.param('q'), {}, function(data) {
             data['statuses'].forEach(function(el){
-                message.push({text: el['text']});
+                message.push({text: el['text'], userName: el['user']['name'], screenName: el['user']['screen_name'], profileImage: el['user']['profile_image_url'], location: el['user']['location']});
+//                message.push(el);
             });
 
             return res.json({
