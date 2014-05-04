@@ -7,11 +7,11 @@
             <h4 class="main__status__title" ng-show="showStatus">Found {{ statusCount }} items..</h4>
         </div>
         <div class="main__preloader" ng-show="showPreloader"></div>
-        <div class="main__results--twitter" ng-hide="showPreloader">
-            <div class="main__results__item row" ng-repeat="searchResult in searchResults">
+        <div class="main__results--twitter" ng-show="showTwitter">
+            <div class="main__results__item row" ng-repeat="searchResult in searchResults.twitter">
                 <div class="main__results__item__user col__1of4 col__left row">
                     <div class="main__results__item__user__ava col__left">
-                        <img src="{{ searchResult.profileImage }}">
+                        <img ng-src="{{ searchResult.profileImage }}">
                     </div>
                     <div class="main__results__item__user__info col__left col__1of2">
                         {{ searchResult.userName }} / <b>@{{ searchResult.screenName }}</b><br/>
@@ -23,36 +23,9 @@
                 </div>
             </div>
         </div>
-        <div class="main__results main__results--instagram">
-            <div class="item item--instagram--thumb">
-                <img src="http://origincache-frc.fbcdn.net/10268785_281837351977730_388358512_s.jpg">
-            </div>
-            <div class="item item--instagram--low">
-                <img src="http://origincache-frc.fbcdn.net/10268785_281837351977730_388358512_a.jpg">
-            </div>
-            <div class="item item--instagram--thumb">
-                <img src="http://origincache-frc.fbcdn.net/10268785_281837351977730_388358512_s.jpg">
-            </div>
-            <div class="item item--instagram--thumb">
-                <img src="http://origincache-frc.fbcdn.net/10268785_281837351977730_388358512_s.jpg">
-            </div>
-            <div class="item item--instagram--thumb">
-                <img src="http://origincache-frc.fbcdn.net/10268785_281837351977730_388358512_s.jpg">
-            </div>
-            <div class="item item--instagram--thumb">
-                <img src="http://origincache-frc.fbcdn.net/10268785_281837351977730_388358512_s.jpg">
-            </div>
-            <div class="item item--instagram--thumb">
-                <img src="http://origincache-frc.fbcdn.net/10268785_281837351977730_388358512_s.jpg">
-            </div>
-            <div class="item item--instagram--thumb">
-                <img src="http://origincache-frc.fbcdn.net/10268785_281837351977730_388358512_s.jpg">
-            </div>
-            <div class="item item--instagram--low">
-                <img src="http://origincache-frc.fbcdn.net/10268785_281837351977730_388358512_a.jpg">
-            </div>
-            <div class="item item--instagram--thumb">
-                <img src="http://origincache-frc.fbcdn.net/10268785_281837351977730_388358512_s.jpg">
+        <div class="main__results main__results--instagram" ngMasonry ng-show="showInstagram" ng-repeat="searchResult in searchResults.instagram">
+            <div class="item item--instagram--{{ searchResult.imageType }}">
+                <img ng-src="{{ searchResult.image }}">
             </div>
         </div>
     </div>

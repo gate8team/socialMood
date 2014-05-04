@@ -55,7 +55,12 @@ module.exports = {
           flag = (error === null) ? false : true;
 
           tag.forEach(function(el){
+              var images = [el['images']['low_resolution']['url'], el['images']['thumbnail']['url']];
+              var i = Math.floor(Math.random() * (1 - 0 + 1)) + 0;
+              var imageType = (i === 0) ? 'low' : 'thumb';
               message.push({
+                  image: images[i],
+                  imageType: imageType,
                   imageLow: el['images']['low_resolution']['url'],
                   imageStandart: el['images']['standard_resolution']['url'],
                   imageThumb: el['images']['thumbnail']['url'],
