@@ -23,7 +23,7 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
     transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
 }
 
-.wrapper {max-width: 1000px; margin: 0 auto;}
+.wrapper {max-width: 1200px; margin: 0 auto;}
 
 .header {margin: 40px 0 0 0;}
     .header__logo {text-align: center; margin: 0 0 0px 0;}
@@ -57,7 +57,7 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
     .row .col__left {float: left;}
     .row .col__right {float: right;}
 
-.item {float: left; margin: 0 20px 20px 0; line-height: 0px;}
+.item {float: left; margin: 0 10px 10px 0; line-height: 0px;}
     .item--instagram {}
     .item--instagram--thumb {width: 160px; height: 160px; border: 5px solid #0c8da0; }
     .item--instagram--low {width: 316px; height: 316px; border: 5px solid #0c8da0; }

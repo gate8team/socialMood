@@ -1,4 +1,8 @@
 //$(document).ready(function(){
+//    $('.main__results--instagram').on('change', function(){
+//        alert('x');
+//    });
+//
 //    $('.main__results--instagram').masonry({
 //        itemSelector: '.item',
 //        singleMode: false,

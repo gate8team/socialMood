@@ -23,8 +23,8 @@
                 </div>
             </div>
         </div>
-        <div class="main__results main__results--instagram" ngMasonry ng-show="showInstagram" ng-repeat="searchResult in searchResults.instagram">
-            <div class="item item--instagram--{{ searchResult.imageType }}">
+        <div class="main__results--instagram" ng-show="showInstagram" masonry='{ "transitionDuration" : "0.4s" , "itemSelector" : ".item"}'>
+            <div masonry-tile ng-repeat="searchResult in searchResults.instagram" class="item item--instagram--{{ searchResult.imageType }}">
                 <img ng-src="{{ searchResult.image }}">
             </div>
         </div>
