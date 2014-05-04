@@ -7,7 +7,7 @@
             <h4 class="main__status__title" ng-show="showStatus">Found {{ statusCount }} items..</h4>
         </div>
         <div class="main__preloader" ng-show="showPreloader"></div>
-        <div class="main__results" ng-hide="showPreloader">
+        <div class="main__results--twitter" ng-hide="showPreloader">
             <div class="main__results__item row" ng-repeat="searchResult in searchResults">
                 <div class="main__results__item__user col__1of4 col__left row">
                     <div class="main__results__item__user__ava col__left">
@@ -21,6 +21,38 @@
                 <div class="main__results__item__text col__3of4 col__right">
                     {{ searchResult.text }}
                 </div>
+            </div>
+        </div>
+        <div class="main__results main__results--instagram">
+            <div class="item item--instagram--thumb">
+                <img src="http://origincache-frc.fbcdn.net/10268785_281837351977730_388358512_s.jpg">
+            </div>
+            <div class="item item--instagram--low">
+                <img src="http://origincache-frc.fbcdn.net/10268785_281837351977730_388358512_a.jpg">
+            </div>
+            <div class="item item--instagram--thumb">
+                <img src="http://origincache-frc.fbcdn.net/10268785_281837351977730_388358512_s.jpg">
+            </div>
+            <div class="item item--instagram--thumb">
+                <img src="http://origincache-frc.fbcdn.net/10268785_281837351977730_388358512_s.jpg">
+            </div>
+            <div class="item item--instagram--thumb">
+                <img src="http://origincache-frc.fbcdn.net/10268785_281837351977730_388358512_s.jpg">
+            </div>
+            <div class="item item--instagram--thumb">
+                <img src="http://origincache-frc.fbcdn.net/10268785_281837351977730_388358512_s.jpg">
+            </div>
+            <div class="item item--instagram--thumb">
+                <img src="http://origincache-frc.fbcdn.net/10268785_281837351977730_388358512_s.jpg">
+            </div>
+            <div class="item item--instagram--thumb">
+                <img src="http://origincache-frc.fbcdn.net/10268785_281837351977730_388358512_s.jpg">
+            </div>
+            <div class="item item--instagram--low">
+                <img src="http://origincache-frc.fbcdn.net/10268785_281837351977730_388358512_a.jpg">
+            </div>
+            <div class="item item--instagram--thumb">
+                <img src="http://origincache-frc.fbcdn.net/10268785_281837351977730_388358512_s.jpg">
             </div>
         </div>
     </div>
