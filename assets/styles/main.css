@@ -32,7 +32,7 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
 
 .main {margin: 20px 0 0 0; padding: 0 30px;}
     .main__search {max-width: 600px; margin: 0 auto;}
-    .main__preloader {background: url(../images/preloader.GIF) no-repeat; height: 40px; width: 40px; margin: 0 auto;}
+    .main__preloader {background: url(../images/loader.GIF) no-repeat; height: 40px; width: 38px; margin: 0 auto;}
     .main__status {}
         .main__status__title {font-size: 20px; font-weight: 400; margin: 30px 0 30px 0;}
     .main__results {margin-top: 30px;}

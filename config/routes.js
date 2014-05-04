@@ -36,10 +36,15 @@ module.exports.routes = {
     view: 'search/index'
   },
 
-    'get /search/:q': {
+    'get /search/twitter/:q': {
         controller    : 'search',
         action        : 'twitter'
-    }
+    },
+
+  'get /search/instagram/:q': {
+      controller    : 'search',
+      action        : 'instagram'
+  }
 
   /*
   // But what if you want your home page to display

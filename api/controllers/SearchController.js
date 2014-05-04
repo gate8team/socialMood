@@ -11,6 +11,11 @@ var twit = new twitter({
     access_token_secret: '6BTHRzHq5EDVKSNx8NallMEFnhuLDR9bmYl2p82Et2UCN'
 });
 
+var instagram = require('instagram').createClient(
+    '2c0ccc1aa28945f28e635bd86b91d751',
+    '42171dd7a8224a9c95331e5352f6eda6'
+);
+
 module.exports = {
    index: function (req, res) {
       return res.view({
@@ -25,8 +30,13 @@ module.exports = {
 
         twit.search(req.param('q'), {}, function(data) {
             data['statuses'].forEach(function(el){
-                message.push({text: el['text'], userName: el['user']['name'], screenName: el['user']['screen_name'], profileImage: el['user']['profile_image_url'], location: el['user']['location']});
-//                message.push(el);
+                message.push({
+                    text: el['text'],
+                    userName: el['user']['name'],
+                    screenName: el['user']['screen_name'],
+                    profileImage: el['user']['profile_image_url'],
+                    location: el['user']['location']
+                });
             });
 
             return res.json({
@@ -35,6 +45,31 @@ module.exports = {
             });
         });
     },
+
+
+  instagram: function(req, res){
+      var flag = false;
+      var message = [];
+
+      instagram.tags.media(req.param('q'), function (tag, error) {
+          flag = (error === null) ? false : true;
+
+          tag.forEach(function(el){
+              message.push({
+                  image: el['images']['low_resolution']['url'],
+                  link: el['link'],
+                  userName: el['user']['username'],
+                  fullName: el['user']['full_name'],
+                  profileImage: el['user']['profile_picture']
+              });
+          });
+
+          return res.json({
+              error: flag,
+              content: message
+          });
+      });
+  },
 
 
 

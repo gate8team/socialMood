@@ -10,7 +10,7 @@ socialMood.controller('SearchController', function($scope, $http, SearchService)
 
         $scope.showPreloader = true;
 
-        SearchService.search($scope.tagName)
+        SearchService.twitterSearch($scope.tagName)
             .success(function(data){
                 if (!data.error) {
                     $scope.showStatus = true;
