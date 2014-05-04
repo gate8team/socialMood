@@ -36,6 +36,8 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
     .main__status {}
         .main__status__title {font-size: 20px; font-weight: 400; margin: 30px 0 30px 0;}
     .main__results {margin-top: 30px;}
+        .main__results--twitter {}
+        .main__results--instagram {}
         .main__results__item {font-weight: 300;}
             .main__results__item__user {}
                 .main__results__item__user__ava {height: 54px; width: 70px; overflow: hidden;}
@@ -54,3 +56,8 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
     .row .col__1of2 {width: 50%;}
     .row .col__left {float: left;}
     .row .col__right {float: right;}
+
+.item {float: left; margin: 0 20px 20px 0; line-height: 0px;}
+    .item--instagram {}
+    .item--instagram--thumb {width: 160px; height: 160px; border: 5px solid #0c8da0; }
+    .item--instagram--low {width: 316px; height: 316px; border: 5px solid #0c8da0; }

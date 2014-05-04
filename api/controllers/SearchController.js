@@ -56,7 +56,9 @@ module.exports = {
 
           tag.forEach(function(el){
               message.push({
-                  image: el['images']['low_resolution']['url'],
+                  imageLow: el['images']['low_resolution']['url'],
+                  imageStandart: el['images']['standard_resolution']['url'],
+                  imageThumb: el['images']['thumbnail']['url'],
                   link: el['link'],
                   userName: el['user']['username'],
                   fullName: el['user']['full_name'],
