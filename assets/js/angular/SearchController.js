@@ -8,6 +8,8 @@ socialMood.controller('SearchController', function($scope, $http, SearchService)
     $scope.showTwitter = false;
     $scope.showInstagram = false;
     $scope.statusCount = 0;
+    $scope.showErrors = false;
+    $scope.errorMessage = '';
 
     $scope.searchByTag = function() {
         $scope.searchResults = [];
@@ -15,6 +17,9 @@ socialMood.controller('SearchController', function($scope, $http, SearchService)
         $scope.showTwitter = false;
         $scope.showInstagram = false;
         $scope.showPreloader = true;
+        $scope.showErrors = false;
+        $scope.showStatus = false;
+        $scope.errorMessage = '';
 
 //        SearchService.twitterSearch($scope.tagName)
 //            .success(function(data){
@@ -39,6 +44,10 @@ socialMood.controller('SearchController', function($scope, $http, SearchService)
 
                     $scope.searchResults.instagram = data.content;
                     $scope.statusCount = data.content.length;
+                } else {
+                    $scope.showPreloader = false;
+                    $scope.showErrors = true;
+                    $scope.errorMessage = data.content;
                 }
             })
             .error(function(data){

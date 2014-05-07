@@ -3,8 +3,11 @@
         <div class="main__search">
             <input type="text" placeholder="Search for your mood.." ng-model="tagName" ng-enter="searchByTag()">
         </div>
-        <div class="main__status">
-            <h4 class="main__status__title" ng-show="showStatus">Found {{ statusCount }} items..</h4>
+        <div class="main__errors">
+            <h4 class="main__errors__title" ng-show="showErrors">{{ errorMessage }}</h4>
+        </div>
+        <div class="main__status" ng-show="showStatus">
+            <h4 class="main__status__title">Found {{ statusCount }} items..</h4>
         </div>
         <div class="main__preloader" ng-show="showPreloader"></div>
         <div class="main__results--twitter" ng-show="showTwitter">

@@ -54,22 +54,26 @@ module.exports = {
       instagram.tags.media(req.param('q'), function (tag, error) {
           flag = (error === null) ? false : true;
 
-          tag.forEach(function(el){
-              var images = [el['images']['low_resolution']['url'], el['images']['thumbnail']['url']];
-              var i = Math.floor(Math.random() * (1 - 0 + 1)) + 0;
-              var imageType = (i === 0) ? 'low' : 'thumb';
-              message.push({
-                  image: images[i],
-                  imageType: imageType,
-                  imageLow: el['images']['low_resolution']['url'],
-                  imageStandart: el['images']['standard_resolution']['url'],
-                  imageThumb: el['images']['thumbnail']['url'],
-                  link: el['link'],
-                  userName: el['user']['username'],
-                  fullName: el['user']['full_name'],
-                  profileImage: el['user']['profile_picture']
+          if (!flag){
+              tag.forEach(function(el){
+                  var images = [el['images']['low_resolution']['url'], el['images']['thumbnail']['url']];
+                  var i = Math.floor(Math.random() * (1 - 0 + 1)) + 0;
+                  var imageType = (i === 0) ? 'low' : 'thumb';
+                  message.push({
+                      image: images[i],
+                      imageType: imageType,
+                      imageLow: el['images']['low_resolution']['url'],
+                      imageStandart: el['images']['standard_resolution']['url'],
+                      imageThumb: el['images']['thumbnail']['url'],
+                      link: el['link'],
+                      userName: el['user']['username'],
+                      fullName: el['user']['full_name'],
+                      profileImage: el['user']['profile_picture']
+                  });
               });
-          });
+          } else {
+              message = 'An error has occurred ;( Please, try again later...';
+          }
 
           return res.json({
               error: flag,
