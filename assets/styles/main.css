@@ -31,7 +31,9 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
     .header__description {text-transform: lowercase; font-size: 15px; font-weight: 300; text-align: center; margin: 0 0 0px 0; color: #0c8da0;}
 
 .main {margin: 20px 0 0 0; padding: 0 30px;}
-    .main__search {max-width: 600px; margin: 0 auto;}
+    .main__search {max-width: 600px; margin: 0 auto; position: relative;}
+        .main__search .main__search__input {padding-right: 30px;}
+        .main__search__icon {position: absolute; right: 8px; top: 6px; background: url(../images/wheel_20x20.png) no-repeat; height: 20px; width: 20px; cursor: pointer;}
     .main__preloader {background: url(../images/loader.GIF) no-repeat; height: 40px; width: 38px; margin: 0 auto;}
     .main__status {}
         .main__status__title {font-size: 20px; font-weight: 400; margin: 30px 0 30px 0;}

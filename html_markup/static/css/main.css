@@ -23,7 +23,7 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
     transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
 }
 
-.wrapper {max-width: 1000px; margin: 0 auto;}
+.wrapper {max-width: 1200px; margin: 0 auto;}
 
 .header {margin: 40px 0 0 0;}
     .header__logo {text-align: center; margin: 0 0 0px 0;}
@@ -31,10 +31,14 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
     .header__description {text-transform: lowercase; font-size: 15px; font-weight: 300; text-align: center; margin: 0 0 0px 0; color: #0c8da0;}
 
 .main {margin: 20px 0 0 0; padding: 0 30px;}
-    .main__search {max-width: 600px; margin: 0 auto;}
-    .main__preloader {background: url(../i/preloader.GIF) no-repeat; height: 40px; width: 40px; margin: 0 auto;}
+    .main__search {max-width: 600px; margin: 0 auto; position: relative;}
+        .main__search .main__search__input {padding-right: 30px;}
+        .main__search__icon {position: absolute; right: 8px; top: 6px; background: url(../i/wheel_20x20.png) no-repeat; height: 20px; width: 20px; cursor: pointer;}
+    .main__preloader {background: url(../i/loader.GIF) no-repeat; height: 40px; width: 38px; margin: 0 auto;}
     .main__status {}
         .main__status__title {font-size: 20px; font-weight: 400; margin: 30px 0 30px 0;}
+    .main__errors {max-width: 600px; margin: 0 auto;}
+        .main__errors__title {font-size: 20px; font-weight: 400; margin: 30px 0 30px 0; text-align: center;}
     .main__results {margin-top: 30px;}
         .main__results--twitter {}
         .main__results--instagram {}
@@ -57,7 +61,7 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
     .row .col__left {float: left;}
     .row .col__right {float: right;}
 
-.item {float: left; margin: 0 20px 20px 0; line-height: 0px;}
+.item {float: left; margin: 0 10px 10px 0; line-height: 0px;}
     .item--instagram {}
-    .item--instagram--thumb {width: 160px; height: 160px; border: 5px solid #0c8da0; }
-    .item--instagram--low {width: 316px; height: 316px; border: 5px solid #0c8da0; }
+        .item--instagram--thumb {width: 160px; height: 160px; border: 5px solid #0c8da0; box-shadow: 0 0px 4px rgba(0,0,0,0.35); -moz-box-shadow: 0 0px 4px rgba(0,0,0,0.35); -webkit-box-shadow: 0 0px 4px rgba(0,0,0,0.35);}
+        .item--instagram--low {width: 316px; height: 316px; border: 5px solid #0c8da0; box-shadow: 0 0px 4px rgba(0,0,0,0.35); -moz-box-shadow: 0 0px 4px rgba(0,0,0,0.35); -webkit-box-shadow: 0 0px 4px rgba(0,0,0,0.35);}

@@ -1,7 +1,8 @@
 <main class="wrapper">
     <div class="main" ng-controller="SearchController">
         <div class="main__search">
-            <input type="text" placeholder="Search for your mood.." ng-model="tagName" ng-enter="searchByTag()">
+            <div class="main__search__icon"></div>
+            <input class="main__search__input" type="text" placeholder="Search for your mood.." ng-model="tagName" ng-enter="searchByTag()">
         </div>
         <div class="main__errors">
             <h4 class="main__errors__title" ng-show="showErrors">{{ errorMessage }}</h4>
