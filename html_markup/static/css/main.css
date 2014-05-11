@@ -33,7 +33,14 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
 .main {margin: 20px 0 0 0; padding: 0 30px;}
     .main__search {max-width: 600px; margin: 0 auto; position: relative;}
         .main__search .main__search__input {padding-right: 30px;}
-        .main__search__icon {position: absolute; right: 8px; top: 6px; background: url(../i/wheel_20x20.png) no-repeat; height: 20px; width: 20px; cursor: pointer;}
+        .main__search__icon {position: absolute; right: 8px; top: 6px; background: url(../i/wheel_20x20.png) no-repeat; height: 20px; width: 20px; cursor: pointer; opacity: .7;}
+        .main__search__icon:hover {opacity: 1;}
+        .main__search__options {position: absolute; right: 0px; top: 35px; min-width: 50px; background: #fefefe; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); border: 1px solid #cccccc; padding: 10px; font-size: 0.77778rem; z-index: 2;}
+            .main__search__options__title {font-size: 0.77778rem; font-weight: bold; margin: 0 0 10px 0;}
+            .main__search__options__item {margin-top: 5px;}
+        .main__search__triangle {width: 0; height: 0; position: absolute; right: 8px; top: 26px; z-index: 2;}
+            .main__search__triangle--up {border-left: 10px solid transparent; border-right: 10px solid transparent; border-bottom: 10px solid #ccc;}
+            .main__search__triangle--up--white {border-left: 10px solid transparent; border-right: 10px solid transparent; border-bottom: 10px solid #fff; top: 27px; z-index: 3;}
     .main__preloader {background: url(../i/loader.GIF) no-repeat; height: 40px; width: 38px; margin: 0 auto;}
     .main__status {}
         .main__status__title {font-size: 20px; font-weight: 400; margin: 30px 0 30px 0;}
